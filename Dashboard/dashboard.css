@@ -1,0 +1,297 @@
+/* Reset and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS variables for theme colors */
+:root {
+  --gray: #e2e2e2;
+  --green: #02813a;
+  --beige: #ECD99B;
+}
+
+/* Body styling: font and background */
+body {
+  margin: 0;
+  font-family: lora;
+  background-color: #02813a;
+  color: #333;
+}
+
+/* 🟩 Sidebar Styling: fixed vertical navigation */
+.sidebar {
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #ECD99B;
+  padding: 25px 20px;
+  width: 85px;
+  position:fixed;
+  transition: all 0.4s ease;
+}
+
+/* Sidebar expands on hover */
+.sidebar:hover {
+  width: 250px;
+  .dashboard { left: 250px; }
+}
+
+/* Sidebar header: logo and title */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+}
+
+/* Sidebar logo image */
+.sidebar-header img {
+  width: 32px;
+  border-radius: 40%;
+  margin-left: -13px;
+}
+
+/* Sidebar title */
+.sidebar-header h2{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #026c30;
+  margin-left: 12px;
+}
+
+/* Sidebar navigation links container */
+.sidebar-link {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #030000;
+  height: 80%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+/* Sidebar section headers */
+.sidebar-link h4 {
+  white-space: nowrap;
+  margin: 1rem 0;
+  position: relative; 
+}
+
+/* Sidebar individual link styling */
+.sidebar-link li a {
+  color: #030000;
+  font-weight: 400;
+  align-items: center;
+  display: flex;
+  padding: 15px 10px;
+  text-decoration: none;
+}
+
+/* Sidebar icons */
+.sidebar-link .material-icons {
+  font-size: 1.2rem;
+  margin-right: 1.5rem;
+}
+
+/* Sidebar link hover effect */
+.sidebar-link li a:hover {
+  background-color: #026c30;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Sidebar section separator line */
+.sidebar-link .Menu-separator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(1);
+  transform: translateY(-50%);
+  background: #ECD99B;
+}
+
+/* Sidebar section header text hidden by default */
+.sidebar-link h4 span {
+  opacity: 0;
+}
+
+/* Show section header text on sidebar hover */
+.sidebar:hover .sidebar-link h4 span {
+  opacity: 1;
+}
+
+/* Sidebar logo image (larger on hover) */
+.sidebar-header img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+/* User Account section at bottom of sidebar */
+.user-account {
+  margin-top: auto;
+  padding: 12px 10px;
+  margin-left: -10px;
+}
+
+/* User info text styling */
+.user-info h3 {
+  margin-left: 15px;
+  font-size: 1.2rem;
+  color: #030000;
+  font-weight: 500;
+  margin-top: 50px;
+}
+
+/* User profile image and layout */
+.user-account .user-profile {
+  color: #030000;
+  align-items: center;
+  display: flex;
+}
+
+/* User profile image styling */
+.user-profile img {
+  width: 55px;
+  border-radius: 50%;
+  margin-left: -5px;
+  margin-top: 50px;
+}
+
+/* 🟦 Main Dashboard Styling: header and navigation */
+
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #02813a;
+  border-bottom: 1px solid #ddd;
+  margin-left: 75px;
+  margin-top: 16px;
+}
+
+/* Dashboard logo styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ECD99B;
+}
+
+/* Logo span color */
+.logo span {
+  color: #333;
+}
+
+/* Search bar container: aligns input and button horizontally */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between input and button */
+}
+
+/* Search input styling */
+.search-bar input {
+  padding: 8px 12px;
+   font-family: lora;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 150px;
+  margin: 0; /* remove any default margin */
+}
+
+input:focus {
+  outline: none; /* focus border color */
+}
+
+/* Search button styling */
+.search-bar button {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  background-color: #ECD99B;
+  color: #030000;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+button:hover {
+  background-color: #bbc297;
+  color: #030000;
+  outline: none;
+}
+
+/* Search icon inside button */
+.search-bar button .material-icons {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Sub-navigation bar below header */
+.sub-nav {
+  background-color: #ECD99B;
+  padding: 10px 30px;
+  border-bottom: 1px solid #ddd;
+  margin-left: 85px;
+}
+
+/* Sub-navigation list styling */
+.sub-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sub-navigation list items */
+.sub-nav li {
+  margin-right: 20px;
+  cursor: pointer;
+  color: #333;
+  padding: 8px;
+}
+
+/* Sub-navigation hover effect */
+.sub-nav li:hover {
+  background-color: #066832;
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+}
+
+/* Sub-navigation focus effect */
+.sub-nav:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #d1b24c;
+}
+
+/* Stats Overview Section */
+.stats-overview {
+  display: grid;
+
+  grid-template-columns: 300px 300px 300px;
+  gap: 10px;
+  padding: 16px;
+  margin-left: 175px;
+}
+
+.stat-card {
+  background-color: #ECD99B;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: left;
+}
+
+.stat-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}

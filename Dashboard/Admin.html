@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduKONEK/Admin Dashboard</title>
+  <!-- Linking Google Icons for sidebar icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <!-- Main container for sidebar and dashboard -->
+  <div class="container">
+
+    <!-- 🟩 Sidebar Navigation: Contains logo, navigation links, and user info -->
+    <aside class="sidebar">
+      <div class="sidebar-container">
+        <!-- Sidebar header: Logo and system name -->
+        <div class="sidebar-header">
+          <img src="Logo/Logo-nb.png" alt="EduKONEK">
+          <h2>Edu.KONEK</h2>
+        </div>
+        <!-- Sidebar Links: Main navigation menu -->
+        <ul class="sidebar-link">
+          <!-- Main Menu section -->
+          <h4>
+            <span>Main Menu</span>
+            <div class="Menu-separator"></div>
+          </h4>
+          <li>
+            <a href="#"><span class="material-icons">
+              home
+            </span>Dashboard</a>
+          </li>
+          <li>
+            <a href="Account_Create/aCreate.html"><span class="material-icons">
+              person
+            </span>Create Account</a>
+          </li>
+          <li>
+            <a href="#"><span class="material-icons">
+              graphic_eq
+            </span>Update School Statistics</a>
+          </li>
+          <!-- General section -->
+          <h4>
+            <span>General</span>
+            <div class="Menu-separator"></div>
+          </h4>
+          <li>
+            <a href="#"><span class="material-icons">
+              notifications_active
+            </span>Notifications</a>
+          </li>
+          <li>
+            <a href="#"><span class="material-icons">
+              calendar_today
+            </span>Update Schedules</a>
+          </li>
+          <!-- Account section -->
+          <h4>
+            <span>Account</span>
+            <div class="Menu-separator"></div>
+          </h4>
+          <li>
+            <a href="#"><span class="material-icons">
+              person_outline
+            </span>Profile </a>
+          </li>
+          <li>
+            <a href="#"><span class="material-icons">
+              settings
+            </span>Settings</a>
+          </li>
+          <li>
+            <a href="#"><span class="material-icons">
+              logout
+            </span>Logout</a>
+          </li>
+        </ul>
+        <!-- User Details: Shows admin profile info -->
+        <div class="user-account">
+          <div class="user-profile">
+            <img src="Logo/up.jpg" alt="User Profile Picture">
+            <div class="user-info">
+              <h3>Admin</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 🟦 Main Dashboard Area: Contains header, search bar, and sub navigation -->
+    <main class="dashboard">
+
+      <!-- Header: Branding and search bar -->
+      <header class="main-header">
+        <div class="logo">Edu.Konek</div>
+        <!-- Search bar for dashboard search functionality -->
+        <div class="search-bar">
+          <input type="text" placeholder="Search">
+          <button class="Search">
+            <span class="material-icons">search</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Sub Navigation: Quick links to dashboard sections -->
+      <nav class="sub-nav">
+        <ul>
+          <li class="highlight">Home</li>
+          <li>Schedules</li>
+          <li>Events</li>
+          <li>Email</li>
+          <li>Notifications</li>
+          <li>Statistics</li>
+          <li>Create Account</li>
+        </ul>
+      </nav>
+
+      <!-- Statistics Overview (add your stats/cards here) -->
+      <section class="stats-overview">
+        <div class="stat-card">
+          <h3>Total Students</h3><span class="material-icons" style="color: #02813a;">group</span>
+          <p>--</p>
+        </div>
+        <div class="stat-card">
+          <h3>Total Teachers</h3>
+          <span class="material-icons" style="color: #02813a;">person</span>
+          <p>--</p>
+        </div>
+        <div class="stat-card">
+          <h3>Active Classes</h3>
+          <span class="material-icons" style="color: #02813a;">class</span>
+          <p>--</p>
+        </div>
+
+    </main>
+  </div>
+</body>
+</html>
