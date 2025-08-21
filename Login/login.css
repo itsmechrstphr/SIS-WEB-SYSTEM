@@ -1,0 +1,176 @@
+/* 🟩 Global styles for all elements: resets and sets font/color for consistency */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    color: #02813a;
+}
+
+/* 🟩 Body background: visually appealing gradient for the login page */
+body {
+    background: linear-gradient(to right,#e2e2e2,#E4C35C,#02813a)
+}
+
+/* 🟩 Login form container: styles the login box */
+.login-container{
+    background-color: #E4C35C;
+    background: linear-gradient(to left,#02813a, #e2e2e2,#E4C35C);
+    width: 450px;
+    height: 350px;
+    padding: 1.5rem;
+    margin-top: 200px;
+    margin-left: 410px;
+    border-radius: 12px;
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+}
+
+/* 🟦 Sign Up form container: styles the registration box */
+.signUp-container {
+    background-color: #E4C35C;
+    background: linear-gradient(to left,#02813a, #e2e2e2,#E4C35C);
+    width: 450px;
+    height: 600px;
+    padding: 1.5rem;
+    margin-top: 100px;
+    margin-left: 410px;
+    border-radius: 12px;
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+}
+
+/* 🟩 Icon styling for input fields */
+span.material-icons {
+    color: black;
+    position: absolute;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* 🟩 Form spacing */
+form {
+    margin: 0.2rem;
+}
+
+/* 🟩 Headings for forms */
+h1, h2 {
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0.4rem;
+    color: #02813a;
+}
+
+/* 🟩 Input fields: style and underline effect */
+input {
+    color: black;
+    width: 100%;
+    background-color: transparent;
+    border:none;
+    padding-left: 1.5rem;
+    font-size: 15px;
+    border-bottom: 0.5px solid #02813a;
+    font-family: sans-serif;
+    margin-bottom: -5px;
+}
+
+/* 🟩 Input group: positions icons and fields together */
+.input-group {
+    padding: 5px 0;
+    position:relative; 
+}
+
+/* 🟩 Input focus: removes outline for cleaner look */
+input:focus {
+    background-color: transparent;
+    outline: transparent;
+}
+
+/* 🟩 Label styling: floats above input when focused */
+label {
+    color:#02813a;
+    position: relative;
+    left: 1.2rem;
+    top: -1.3rem;
+    cursor: auto;
+    transition: 0.3s ease all;
+}
+
+/* 🟩 Hide placeholder text for custom label animation */
+input::placeholder {
+    color: transparent;
+}
+
+/* 🟩 Label animation: moves label up when input is focused or filled */
+input:focus~label, input:not(:placeholder-shown)~label {
+    top: -2.3rem;
+    color: hsl(130, 90%, 28%);
+    font-size: 13px;
+}
+
+/* 🟩 Button styling for Sign In and Sign Up */
+.SignInbtn, .SignUpbtn {
+    justify-content: center;
+    text-align: center;
+    padding: 2px;
+    width: 100%;
+    border-radius: 3px;
+    font-family: lora;
+    font-weight: lighter;
+    font-size: 1.1rem;
+    background-color: #02813a;
+    background: linear-gradient(to right, #02813a,#e2e2e2, #E4C35C);
+    border: none;
+    color: #02813a;
+    margin-top: 1.5px;
+    margin-bottom: 5px;
+}
+
+.SignInbtn:hover, .SignUpbtn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* 🟩 Link styling for switching forms */
+.SignInlnk, .SignUplnk {
+    text-align: center;
+    font-weight: bold;
+    font-family: roboto;
+}
+
+/* 🟩 Forgot password link styling */
+.Forgot {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+/* 🟩 Forgot password anchor styling */
+.Forgot a {
+    text-decoration: none;
+    color: #02813a;
+}
+
+/* 🟩 Additional text and link styling for form navigation */
+.AC, .DHA ,.SignInlnk, .SignUplnk {
+    text-align: center;
+    margin-top: 0.5rem;
+    display: inline-block;
+    margin-left: 1%;
+}
+
+/* 🟩 Button styling for navigation links */
+.SignInlnk, .SignUplnk {
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* 🟩 Hover effect for navigation links */
+.SignInlnk:hover, .SignUplnk:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}

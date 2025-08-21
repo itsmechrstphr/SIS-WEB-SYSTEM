@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking Google Icons for sidebar icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Login page styling -->
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+
+<!-- 🟩 Login Form: Allows existing users to sign in to the system -->
+<div class="login-container" id="Login" style="display: none;">
+    <h1>Login</h1>
+    <!-- Form submits to register.php for authentication (should be login.php for login) -->
+    <form method="post" action="register.php">
+        <!-- Email input field with icon -->
+        <div class="input-group">
+            <span class="material-icons">email</span>
+            <input type="text" placeholder="Email" required>
+            <label for="Email">Email</label>
+        </div>
+        <!-- Password input field with icon -->
+        <div class="input-group">
+            <span class="material-icons">lock</span>
+            <input type="password" placeholder="Password" required>
+            <label for="Password">Password</label>
+        </div>
+        <!-- Forgot password link for password recovery -->
+        <p class="Forgot">
+            <a id="Forgot" href="#">Forgot Password</a>
+        </p>
+        <!-- Sign In button to submit login credentials -->
+        <div class="SignInbtn">
+            <button class="SignInbtn" type="submit" name="Sign In">Sign In</button>
+        </div>
+    </form>
+    <!-- Link to switch to Sign Up form for new users -->
+    <div class="SignUp">
+        <p class="DHA" id="DHA">Don't have an account?</p>
+        <button class="SignUplnk" id="sUp">Sign Up</button>
+    </div>
+</div>
+
+<!-- 🟦 Sign Up Form: Allows new users to register for the system -->
+<div class="signUp-container" id="signUp">
+    <h1>Sign Up</h1>
+    <!-- Registration form for new users -->
+    <form method="post" action="">
+        <!-- First Name input field -->
+        <div class="input-group">
+            <span class="material-icons">person</span>
+            <input type="text" placeholder="First Name" required>
+            <label for="First Name">First Name</label>
+        </div>
+        <!-- Last Name input field -->
+        <div class="input-group">
+            <span class="material-icons">person</span>
+            <input type="text" placeholder="Last Name" required>
+            <label for="Last Name">Last Name</label>
+        </div>
+        <!-- Email input field -->
+        <div class="input-group">
+            <span class="material-icons">email</span>
+            <input type="text" placeholder="Email" required>
+            <label for="Email">Email</label>
+        </div>
+        <!-- Password input field -->
+        <div class="input-group">
+            <span class="material-icons">lock</span>
+            <input type="password" placeholder="Password" required>
+            <label for="Password">Password</label>
+        </div>
+        <!-- Confirm Password input field -->
+        <div class="input-group">
+            <span class="material-icons">lock</span>
+            <input type="password" placeholder="Confirm Password" required>
+            <label for="Confirm Password">Confirm Password</label>
+        </div>
+        <!-- Sign Up button to submit registration details -->
+        <div class="SignUpbtn">
+            <button class="SignUpbtn" type="submit" name="Sign Up">Sign Up</button>
+        </div>
+    </form>
+    <!-- Link to switch to Sign In form for existing users -->
+    <div class="SignUp">
+        <p class="AC">Already have an account?</p>
+        <button class="SignInlnk" id="sIn">Sign In</button>
+    </div>
+</div>
+<!-- JavaScript for toggling between login and signup forms -->
+<script src="login.js"></script>
+</body>
+</html>
