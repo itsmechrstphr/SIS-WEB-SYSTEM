@@ -1,0 +1,99 @@
+/* admin.css - based on your original styles, with fixes + responsive + modal */
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gray:#e2e2e2;--green:#02813a;--beige:#ECD99B;--brown:#C1A45F}
+body{font-family:'Lora',serif;background-color:var(--beige);color:#333}
+
+.container{display:flex}
+
+/* Sidebar */
+.sidebar{top:0;left:0;display:flex;height:100vh;flex-direction:column;overflow-x:hidden;background-color:var(--brown);padding:25px 20px;width:85px;position:fixed;transition:all .4s ease;scrollbar-width:none;z-index:20}
+.sidebar:hover{width:250px;background-color:#e2c072}
+.sidebar-container{height:100%;display:flex;flex-direction:column}
+.sidebar-header{display:flex;align-items:center;gap:12px}
+.sidebar-header img{width:42px;border-radius:50%}
+.sidebar-header h2{font-size:1.2rem;font-weight:700;white-space:nowrap}
+
+.sidebar-link{list-style:none;margin:12px 0 0 0;color:#030000;height:100%;overflow-y:auto;scrollbar-width:none}
+.sidebar-link h4{white-space:nowrap;margin:1rem 0;position:relative}
+.sidebar-link li a{color:#030000;font-weight:400;align-items:center;display:flex;gap:14px;padding:12px 10px;text-decoration:none;border-radius:8px}
+.sidebar-link .material-icons{font-size:1.2rem}
+.sidebar-link li a:hover{background-color:#634809;color:#fff}
+.sidebar-link .Menu-separator{position:absolute;left:0;top:50%;width:100%;height:1px;transform:translateY(-50%);background:rgba(0,0,0,.15)}
+
+.user-account{margin-top:auto;padding:12px 10px;margin-left:-10px}
+.user-account .user-profile{color:#030000;align-items:center;display:flex;gap:12px}
+.user-profile img{width:55px;border-radius:20%;margin-left:-5px}
+
+/* Dashboard */
+.dashboard{margin-left:85px;flex:1;transition:margin-left .4s ease}
+.sidebar:hover ~ .dashboard{margin-left:250px}
+
+/* Header */
+.main-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background-color:var(--beige)}
+.main-header .left{display:flex;align-items:center;gap:12px}
+.main-header img{width:42px;border-radius:50%}
+.logo{font-size:24px;font-weight:700;color:#644f4f}
+.sub-nav{width:max-content;text-align:center;color:#030000;margin-left:15px}
+.sub-nav ul{display:flex;list-style:none;gap:10px}
+.sub-nav li{margin-right:12px;cursor:pointer;padding:8px;border-radius:6px;user-select:none}
+.sub-nav li:hover,.sub-nav li.highlight{background-color:#02813a;color:#fff}
+
+.hamburger{display:none;border:none;background:transparent;cursor:pointer;border-radius:8px;padding:6px}
+.hamburger:focus{outline:2px solid #d1b24c}
+
+/* Search (kept hook) */
+.search-bar{display:flex;align-items:center;gap:8px}
+.search-bar input{padding:8px 12px;border-radius:4px;border:1px solid #ccc;width:150px}
+.search-bar button{padding:8px;border-radius:4px;border:none;background-color:var(--beige);color:#030000;font-weight:bold;cursor:pointer;display:flex;align-items:center;gap:4px}
+.search-bar button:hover{transform:scale(.96)}
+
+/* Stats */
+.stats-overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;padding:16px}
+.stat-card{background-color:#cfb169;border:1px solid #ddd;border-radius:12px;padding:16px;text-align:left;box-shadow:0 10px 15px rgba(90,90,104,.25);transition:transform .25s,box-shadow .25s}
+.stat-card:hover{transform:translateY(-3px);box-shadow:0 16px 22px rgba(0,0,0,.25)}
+.stat-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.stat-card p{font-size:2rem;font-weight:700}
+
+/* Events/Schedules */
+.events-schedules-wrapper{display:flex;gap:32px;margin:20px 16px 25px 16px;flex-wrap:wrap}
+.events-section,.schedules-section{flex:1;min-width:300px;display:flex;flex-direction:column}
+.events-section-cards,.schedules-section-cards{display:flex;flex-direction:column;gap:12px}
+.event-card,.schedule-card{background-color:#cfb169;border:1px solid #ddd;color:#333;border-radius:12px;padding:16px;text-align:left;box-shadow:0 10px 15px rgba(90,90,104,.25);min-height:110px;position:relative}
+.event-card.green{background-color:#02813a;color:#fff}
+.card-title{font-size:1.1rem;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.card-dates{opacity:.9;margin-top:4px}
+.card-actions{position:absolute;top:10px;right:10px;display:flex;gap:6px}
+.icon-btn{border:none;background:rgba(0,0,0,.05);border-radius:8px;padding:6px;cursor:pointer}
+.icon-btn:hover{background:rgba(0,0,0,.12)}
+
+/* Inline forms */
+.inline-form{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px 0}
+.inline-form input,.inline-form select{padding:10px;border-radius:8px;border:1px solid #ccc}
+.inline-form button{display:flex;align-items:center;gap:6px;padding:10px 12px;border:none;border-radius:10px;background:#02813a;color:#fff;cursor:pointer;font-weight:600}
+.inline-form button:hover{opacity:.9}
+
+/* Footer */
+.main-footer{background-color:#c1a45f;padding:16px;text-align:center;font-size:.9rem;border-top:1px solid rgba(0,0,0,.1)}
+
+.main-footer a{color:#054d20;text-decoration:none;font-weight:700}
+
+/* Modal (Create Account) */
+.modal{position:fixed;inset:0;display:none}
+.modal[aria-hidden="false"]{display:block}
+.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.4)}
+.modal-dialog{position:relative;z-index:2;max-width:640px;margin:6vh auto;background:#fff;border-radius:16px;box-shadow:0 24px 50px rgba(0,0,0,.35);padding:14px}
+.modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:8px}
+.modal-actions{display:flex;justify-content:flex-end;margin-top:12px}
+.modal-actions button{display:flex;align-items:center;gap:6px;padding:10px 12px;border:none;border-radius:10px;background:#02813a;color:#fff;cursor:pointer;font-weight:700}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hamburger{display:inline-flex}
+  .sidebar{transform:translateX(-100%)}
+  .sidebar.open{transform:translateX(0)}
+  .sidebar:hover{width:85px}
+  .sidebar:hover ~ .dashboard{margin-left:85px}
+  .dashboard{margin-left:0}
+}
