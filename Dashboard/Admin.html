@@ -17,16 +17,22 @@
       <div class="sidebar-container">
         <!-- Sidebar header: Logo and system name -->
         <div class="sidebar-header">
-          <img src="Logo/Logo-nb.png" alt="EduKONEK">
+          <img src="Logo/Logo.png" alt="EduKONEK">
           <h2>Edu.KONEK</h2>
         </div>
         <!-- Sidebar Links: Main navigation menu -->
         <ul class="sidebar-link">
+            <!-- Search bar for dashboard search functionality -->
           <!-- Main Menu section -->
           <h4>
             <span>Main Menu</span>
             <div class="Menu-separator"></div>
           </h4>
+           <li>
+              <a href="#" class="material-icons">
+                <span class="material-icons">search</span>
+              </a>
+            </li>
           <li>
             <a href="#"><span class="material-icons">
               home
@@ -81,7 +87,7 @@
         <!-- User Details: Shows admin profile info -->
         <div class="user-account">
           <div class="user-profile">
-            <img src="Logo/up.jpg" alt="User Profile Picture">
+          <img src="Logo/up.jpg" alt="User Profile Picture">
             <div class="user-info">
               <h3>Admin</h3>
             </div>
@@ -95,18 +101,11 @@
 
       <!-- Header: Branding and search bar -->
       <header class="main-header">
+        <img src="Logo/Logo.png" alt="Logo ng nanay mo">
         <div class="logo">Edu.Konek</div>
-        <!-- Search bar for dashboard search functionality -->
-        <div class="search-bar">
-          <input type="text" placeholder="Search">
-          <button class="Search">
-            <span class="material-icons">search</span>
-          </button>
-        </div>
-      </header>
-
-      <!-- Sub Navigation: Quick links to dashboard sections -->
-      <nav class="sub-nav">
+        
+        <!-- Sub Navigation: Quick links to dashboard sections -->
+        <nav class="sub-nav">
         <ul>
           <li class="highlight">Home</li>
           <li>Schedules</li>
@@ -117,6 +116,7 @@
           <li>Create Account</li>
         </ul>
       </nav>
+      </header>
 
       <!-- Statistics Overview (add your stats/cards here) -->
       <section class="stats-overview">
@@ -135,7 +135,67 @@
           <p>--</p>
         </div>
 
+         <!-- Events Section -->
+  <section class="events-schedules-wrapper">
+    <section class="events-section">
+      <h2>Events</h2>
+      <div class="events-section-cards">
+        <div class="event-card">
+          <h3>Buwan ng Wika</h3><span class="material-icons" style="color: #02813a;">calendar_today</span>
+          <p>August 2025</p>
+        </div>
+        <div class="event-card">
+          <h3>Christmas Break</h3><span class="material-icons" style="color: #02813a;">calendar_today</span>
+          <p>December 2025</p>
+        </div>
+        <div class="event-card">
+          <h3>Palaro</h3><span class="material-icons" style="color: #02813a;">calendar_today</span>
+          <p>January 2026</p>
+        </div>
+        <div class="event-card">
+          <h3>Foundation Day</h3><span class="material-icons" style="color: #02813a;">calendar_today</span>
+          <p>February 2025</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🟦 School Schedules Section -->
+    <section class="schedules-section">
+      <h2>School Schedules</h2>
+      <div class="schedules-section-cards" id="schedules-list">
+        <!-- JS will populate schedule items here -->
+      </div>
+    </section>
+  </section>
+</section>
+
+      <!-- Footer: Copyright and links -->
+      <footer class="main-footer">
+        <p>&copy; 2025 EduKONEK. All rights reserved.</p>
+        <p>Developed by <a href="https://github.com/your-profile">Your Name</a></p>
+      </footer>
     </main>
-  </div>
+
+    <script>
+  const schedules = [
+    { title: "First Quarter Exams", date: "September 10-12, 2025" },
+    { title: "Parent-Teacher Meeting", date: "October 5, 2025" },
+    { title: "Semestral Break", date: "October 20-24, 2025" },
+    { title: "Enrollment Period", date: "June 1-15, 2025" }
+  ];
+
+const schedulesList = document.getElementById('schedules-list');
+schedules.forEach(schedule => {
+  const card = document.createElement('div');
+  card.className = 'schedule-card';
+  card.innerHTML = `
+    <h3>${schedule.title}</h3>
+    <span class="material-icons" style="color: #02813a;">event</span>
+    <p>${schedule.date}</p>
+  `;
+  schedulesList.appendChild(card);
+});
+</script>
+
 </body>
 </html>
