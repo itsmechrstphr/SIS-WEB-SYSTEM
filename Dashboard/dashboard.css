@@ -16,7 +16,7 @@
 body {
   margin: 0;
   font-family: lora;
-  background-color: #02813a;
+  background-color: #ECD99B;
   color: #333;
 }
 
@@ -28,17 +28,19 @@ body {
   height: 100%;
   flex-direction: column;
   overflow-x: hidden;
-  background-color: #ECD99B;
+  background-color: #C1A45F;
   padding: 25px 20px;
   width: 85px;
   position:fixed;
   transition: all 0.4s ease;
+  scrollbar-width: none;
 }
 
 /* Sidebar expands on hover */
 .sidebar:hover {
   width: 250px;
-  .dashboard { left: 250px; }
+  .dashboard { left: 250px;}
+  background-color: #e2c072;
 }
 
 /* Sidebar header: logo and title */
@@ -49,17 +51,16 @@ body {
 
 /* Sidebar logo image */
 .sidebar-header img {
-  width: 32px;
-  border-radius: 40%;
-  margin-left: -13px;
+  width: 50px;
+  border-radius: 50%;
 }
 
 /* Sidebar title */
 .sidebar-header h2{
   font-size: 1.5rem;
   font-weight: 700;
-  color: #026c30;
-  margin-left: 12px;
+  border-radius: 4px;
+  margin-left: 24px;
 }
 
 /* Sidebar navigation links container */
@@ -77,7 +78,7 @@ body {
 .sidebar-link h4 {
   white-space: nowrap;
   margin: 1rem 0;
-  position: relative; 
+  position: relative;
 }
 
 /* Sidebar individual link styling */
@@ -98,7 +99,7 @@ body {
 
 /* Sidebar link hover effect */
 .sidebar-link li a:hover {
-  background-color: #026c30;
+  background-color: #634809;
   color: white;
   border-radius: 8px;
 }
@@ -112,7 +113,6 @@ body {
   height: 1px;
   transform: scaleX(1);
   transform: translateY(-50%);
-  background: #ECD99B;
 }
 
 /* Sidebar section header text hidden by default */
@@ -123,11 +123,13 @@ body {
 /* Show section header text on sidebar hover */
 .sidebar:hover .sidebar-link h4 span {
   opacity: 1;
+  margin-top: 8px;
+  color: #030000;
 }
 
 /* Sidebar logo image (larger on hover) */
 .sidebar-header img {
-  width: 70px;
+  width: 42px;
   border-radius: 50%;
 }
 
@@ -157,7 +159,7 @@ body {
 /* User profile image styling */
 .user-profile img {
   width: 55px;
-  border-radius: 50%;
+  border-radius: 20%;
   margin-left: -5px;
   margin-top: 50px;
 }
@@ -170,17 +172,22 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
-  background-color: #02813a;
-  border-bottom: 1px solid #ddd;
-  margin-left: 75px;
-  margin-top: 16px;
+  background-color: #ECD99B;
+  margin-left: 55px;
+  top: 0;
+}
+
+.main-header img {
+  width: 42px;
+  border-radius: 50%;
+  margin-right: -125px;
 }
 
 /* Dashboard logo styling */
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #ECD99B;
+  color: #644f4f;
 }
 
 /* Logo span color */
@@ -224,7 +231,7 @@ input:focus {
 }
 
 button:hover {
-  background-color: #bbc297;
+  transform: scale(0.9);
   color: #030000;
   outline: none;
 }
@@ -237,10 +244,10 @@ button:hover {
 
 /* Sub-navigation bar below header */
 .sub-nav {
-  background-color: #ECD99B;
-  padding: 10px 30px;
-  border-bottom: 1px solid #ddd;
-  margin-left: 85px;
+  width: max-content;
+  text-align: center;
+  color: #030000;
+  margin-left: 15px;
 }
 
 /* Sub-navigation list styling */
@@ -253,15 +260,14 @@ button:hover {
 
 /* Sub-navigation list items */
 .sub-nav li {
-  margin-right: 20px;
+  margin-right: 45px;
   cursor: pointer;
-  color: #333;
   padding: 8px;
 }
 
 /* Sub-navigation hover effect */
 .sub-nav li:hover {
-  background-color: #066832;
+  background-color: #4b3606;
   padding: 8px;
   border-radius: 4px;
   color: white;
@@ -276,22 +282,88 @@ button:hover {
 /* Stats Overview Section */
 .stats-overview {
   display: grid;
-
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: 350px 400px 390px;
   gap: 10px;
   padding: 16px;
-  margin-left: 175px;
+  margin-left: 85px;
+  font-weight: 300px;
 }
 
 .stat-card {
-  background-color: #ECD99B;
+  background-color: #cfb169;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
   text-align: left;
+  box-shadow: 0 10px 15px rgba(90, 90, 104, 0.9);
 }
 
 .stat-card h3 {
   margin-bottom: 8px;
   font-size: 1.5rem;
+}
+
+/* Events Section */
+/* Wrapper to place Events and Schedules side by side */
+.events-schedules-wrapper {
+  display: flex;
+  gap: 32px;
+  margin-top: 45px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+
+/* Events Section */
+.events-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 45px;
+}
+
+.events-section-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.event-card {
+  background-color: #02813a;
+  border: 1px solid #ddd;
+  color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: left;
+  box-shadow: 0 10px 15px rgba(90, 90, 104, 0.9);
+  width: 450px;
+  height: 150px;
+  min-width: 180px;
+  max-width: 450px;
+}
+
+/* Schedules Section */
+.schedules-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedules-section-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.schedule-card {
+  background-color: #cfb169;
+  border: 1px solid #ddd;
+  color: #333;
+  width: 450px ;
+  height: 150px;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: left;
+  box-shadow: 0 10px 15px rgba(90, 90, 104, 0.9);
+  min-width: 180px;
+  max-width: 450px;
 }
