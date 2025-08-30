@@ -1,0 +1,470 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f3f4f6;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    background: #f3f4f6;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Login/Signup Forms */
+.login-container, .signup-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.signUp-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .logo {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     justify-content: center;
+     margin-left: -24px;
+     font-size: 14px;
+}
+
+    .logo-dashboard {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     justify-content: center;
+     font-size: 14px;
+}
+
+    .logo-dashboard img {
+     width: 42px;
+     height: 42px;
+     border-radius: 50%;
+     object-fit: cover;
+}
+
+    .logo img {
+     width: 42px;
+     height: 42px;
+     border-radius: 50%;
+     object-fit: cover;
+}
+
+.login-header h1 {
+    color: #4a5568;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.login-header p {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.signUp-header h1 {
+    color: #4a5568;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.signUp-header p {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.login-form, .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #111827 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px  rgba(74, 97, 202, 0.4);
+}
+
+.btn-secondary {
+    background: #150479;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #150479;
+}
+
+.signup-link, .login-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-link a, .login-link a {
+    color: #111827;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover, .login-link a:hover {
+    opacity: 0.7;
+}
+
+/* Messages */
+.error-message {
+    background: #fed7d7;
+    color: #c53030;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 4px solid #c53030;
+}
+
+.success-message {
+    background: #c6f6d5;
+    color: #2d7d32;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 4px solid #2d7d32;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+    background: white;
+    min-height: 100vh;
+}
+
+.dashboard-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header h1 {
+    font-size: 1.8rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dashboard-nav {
+    background: #f7fafc;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.dashboard-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.dashboard-nav a {
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.dashboard-nav a:hover {
+    background: #667eea;
+    color: white;
+}
+
+.dashboard-content {
+    padding: 30px;
+}
+
+.dashboard-section {
+    margin-bottom: 40px;
+}
+
+.dashboard-section h2 {
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Forms in Dashboard */
+.form-container {
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-container h3 {
+    margin-bottom: 15px;
+    color: #4a5568;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-row input, .form-row select {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 5px;
+}
+
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 5px;
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Tables */
+.table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background: #f7fafc;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+tr:hover {
+    background: #f7fafc;
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #667eea;
+}
+
+.event-card h4 {
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+/* Notifications */
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notification-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #48bb78;
+}
+
+.notification-item h4 {
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.notification-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #718096;
+}
+
+/* Attendance Stats */
+.attendance-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-card h3 {
+    color: #4a5568;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.stat-details {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+/* Grade colors */
+.grade-excellent { color: #38a169; font-weight: bold; }
+.grade-good { color: #3182ce; font-weight: bold; }
+.grade-average { color: #d69e2e; font-weight: bold; }
+.grade-poor { color: #e53e3e; font-weight: bold; }
+
+/* Attendance status colors */
+.status-present { color: #38a169; font-weight: bold; }
+.status-absent { color: #e53e3e; font-weight: bold; }
+.status-late { color: #d69e2e; font-weight: bold; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .dashboard-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .user-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .attendance-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container, .signup-container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .dashboard-content {
+        padding: 15px;
+    }
+    
+    .table-container {
+        font-size: 0.9rem;
+    }
+}
